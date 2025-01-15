@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891156656242",
+    "project_id": "taste-on-wheels-daf15",
+    "storage_bucket": "taste-on-wheels-daf15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891156656242:android:2893c3cce18818010292eb",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxeT_DXF053HycvUfFvqFO1SEzmTkYzcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

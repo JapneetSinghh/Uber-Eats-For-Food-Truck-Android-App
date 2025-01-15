@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="FoodTruck"
+        android:id="@+id/truck"
+        android:icon="@drawable/foodbank"/>
+    <item
+        android:id="@+id/fast"
+        android:icon="@drawable/fastfood"
+        android:title="FastFood"
+        />
+
+    <item
+        android:id="@+id/bag"
+        android:icon="@drawable/bag"
+        android:title="Bag"
+        android:visible="false" />
+</menu>

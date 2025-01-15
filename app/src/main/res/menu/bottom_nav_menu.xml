@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_add_truck"
+        android:icon="@drawable/ic_money"
+        android:title="Add Truck" />
+    <item
+        android:id="@+id/nav_my_trucks"
+        android:icon="@drawable/ic_money"
+        android:title="My Trucks" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_money"
+        android:title="Favorites" />
+</menu>

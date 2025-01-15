@@ -1,0 +1,829 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/foodTruckFormScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_food_truck"
+            android:textSize="22sp"
+            android:layout_marginBottom="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_truck_name"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background"
+            android:hint="@string/food_truck_name_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_email"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/contact_email_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_number"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/contact_number_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_truck_address"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/food_truck_address_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/form_edit_text_background" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/uploadImageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/upload_image_text"
+                android:textColor="#DFB257"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/uploadImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/upload_image_button_text"
+                android:textColor="@color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imagePreviewRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:id="@+id/uploadImageError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:visibility="gone"
+                android:text="@string/upload_image_error_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/average_price"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckAvgPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/average_price_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/operation_days"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/monday"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/mondayRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <RadioButton
+                        android:id="@+id/mondayOpen"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/day_open" />
+
+                    <RadioButton
+                        android:id="@+id/mondayClosed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/day_closed" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mondayTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="8dp">
+
+                <Spinner
+                    android:id="@+id/mondayOpeningTimeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_edit_text_background"
+                    android:padding="8dp" />
+
+                <Spinner
+                    android:id="@+id/mondayClosingTimeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_edit_text_background"
+                    android:layout_marginLeft="8dp"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/tuesday"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/tuesdayRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <RadioButton
+                    android:id="@+id/tuesdayOpen"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_open" />
+
+                <RadioButton
+                    android:id="@+id/tuesdayClosed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_closed" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tuesdayTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/tuesdayOpeningTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/tuesdayClosingTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/wednesday"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/wednesdayRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <RadioButton
+                    android:id="@+id/wednesdayOpen"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_open" />
+
+                <RadioButton
+                    android:id="@+id/wednesdayClosed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_closed" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wednesdayTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/wednesdayOpeningTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/wednesdayClosingTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/thursday"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/thursdayRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <RadioButton
+                    android:id="@+id/thursdayOpen"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_open" />
+
+                <RadioButton
+                    android:id="@+id/thursdayClosed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_closed" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thursdayTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/thursdayOpeningTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/thursdayClosingTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/friday"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/fridayRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <RadioButton
+                    android:id="@+id/fridayOpen"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_open" />
+
+                <RadioButton
+                    android:id="@+id/fridayClosed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_closed" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fridayTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/fridayOpeningTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/fridayClosingTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/saturday"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/saturdayRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <RadioButton
+                    android:id="@+id/saturdayOpen"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_open" />
+
+                <RadioButton
+                    android:id="@+id/saturdayClosed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_closed" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saturdayTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/saturdayOpeningTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/saturdayClosingTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/sunday"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/sundayRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <RadioButton
+                    android:id="@+id/sundayOpen"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_open" />
+
+                <RadioButton
+                    android:id="@+id/sundayClosed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_closed" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sundayTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/sundayOpeningTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:padding="8dp" />
+
+            <Spinner
+                android:id="@+id/sundayClosingTimeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form_edit_text_background"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuisines_offered"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTrucKCuisines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cuisines_offered_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three_special_dishes"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/specialDish1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/three_special_dishes1_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <EditText
+            android:id="@+id/specialDish2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/three_special_dishes2_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <EditText
+            android:id="@+id/specialDish3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/three_special_dishes3_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_truck_famous_for"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckFamousFor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/food_truck_famous_for_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_truck_description"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/food_truck_description_hint"
+            android:minHeight="110dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:gravity="top"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/serving_since"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/servingSinceSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todays_discount"
+            android:textColor="#DFB257"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/todaysDiscountSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_discounts"
+            android:textColor="#DFB257"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_discounts1"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/CustomOffer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/custom_discounts1_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_discounts2"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/CustomOffer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/custom_discounts2_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_discounts3"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/CustomOffer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/custom_discounts3_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/website_url"
+            android:textColor="#DFB257"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/foodTruckOwnerWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/website_url_hint"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:background="@drawable/form_edit_text_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/cancelFoodTruckBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="addFoodTruck"
+                android:text="@string/cancel_food_truck_button"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <Button
+                android:id="@+id/addFoodTruckBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="addFoodTruck"
+                android:text="add"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">मेरा आवेदन</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">पहला टुकड़ा</string>
+    <string name="second_fragment_label">दूसरा टुकड़ा</string>
+    <string name="next">अगला</string>
+    <string name="previous">पहले का</string>
+    <string name="hello_blank_fragment">नमस्ते खाली टुकड़ा</string>
+    <string name="enter_your_food_truck">अपने खाद्य ट्रक का विवरण खंड दर्ज करें</string>
+    <string name="food_truck_name">खाद्य ट्रक का नाम</string>
+    <string name="food_truck_name_hint">उदाहरण के लिए: चक द्वारा कॉफ़ी</string>
+    <string name="contact_email">ई - मेल से संपर्क करे</string>
+    <string name="contact_email_hint">coffeebychucks@gmail.com</string>
+    <string name="food_truck_address">खाद्य ट्रक का पता</string>
+    <string name="food_truck_address_hint">86, Foregate, Fairway Road, Kitchener, N2M 4E4</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="contact_number_hint">(XXX) XXX XXXX</string>
+    <string name="average_price">Average Price for 2 Person ($)</string>
+    <string name="average_price_hint">$60</string>
+    <string name="lorem_ipsum">txt</string>
+    <string name="cuisines_offered">Cuisines Offered at your Food Truck</string>
+    <string name="cuisines_offered_hint">Indian, Italian, Lebanese, Chinese, ....</string>
+    <string name="three_special_dishes">Enter your 3 special Dishes/Drinks</string>
+    <string name="three_special_dishes1_hint">Pasta</string>
+    <string name="three_special_dishes2_hint">Tacos</string>
+    <string name="three_special_dishes3_hint">Falafel</string>
+    <string name="food_truck_famous_for">What is your Food Truck Famous for?</string>
+    <string name="food_truck_famous_for_hint">Burgers, Mocktails, Fast Service, Music, ....</string>
+    <string name="food_truck_description">Describe your Food Truck</string>
+    <string name="food_truck_description_hint">Minimum 30 words</string>
+    <string name="serving_since">Serving Since </string>
+    <string name="todays_discount">Today\'s Discount</string>
+    <string name="custom_discounts">Add your Custom Discounts/Offers</string>
+    <string name="custom_discounts1">Custom Offer 1</string>
+    <string name="custom_discounts1_hint">15% Off on Student ID</string>
+    <string name="custom_discounts2">Custom Offer 2</string>
+    <string name="custom_discounts2_hint">Burger + Fries @ 12.59</string>
+    <string name="custom_discounts3">Custom Offer 3</string>
+    <string name="custom_discounts3_hint">Free Drink on oder above $20</string>
+    <string name="website_url">Website URL</string>
+    <string name="website_url_hint">chucisa.ca</string>
+    <string name="add_food_truck_button">Add Food Truck</string>
+    <string name="cancel_food_truck_button">Cancel</string>
+    <string name="operation_days">Select Food Truck\'s Working Days and Hours</string>
+    <string name="day_open">Open</string>
+    <string name="day_closed">Closed</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="open_time_hint">Open Time</string>
+    <string name="close_time_hint">Close Time</string>
+    <string name="upload_image_text">Upload image (you can upload up to 6 images)</string>
+    <string name="upload_image_button_text">Upload Image</string>
+    <string name="upload_image_error_text">Please upload at least 2 images</string>
+    <string name="delete_image">Image Deleted</string>
+    <string name="forget_password">Forgot Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="registered_email">Enter your registered Email</string>
+    <string name="add_button">Add</string>
+    <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_heading">Privacy Policy for Truck On Wheels</string>
+    <string name="privacy_policy_last_updated">Last updated: November 30, 2024</string>
+    <string name="privacy_policy_content"> At Taste on Wheels, we are committed to protecting your privacy. We collect information to provide better services tailored to your preferences. This includes information such as your location, preferences, and interactions with our app. Your data helps us offer personalized recommendations, improve app functionality, notify you of updates, and deliver relevant content.
+
+    We may share limited information with trusted service providers to enhance your experience, such as enabling app features or processing payments securely. Rest assured, we do not sell your data to third parties.
+
+    You have the right to manage your preferences, including opting out of marketing communications or location tracking. For more details, review our full privacy policy within the app or contact us at support@tasteonwheels.com.
+
+    By using our services, you agree to this Privacy Policy. Your trust is important to us, and we work diligently to safeguard your information.
+</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="back_button_desc">Go Back</string>
+
+    <!-- Personal Information Strings -->
+    <string name="personal_information_title">Personal Information</string>
+    <string name="name_label">Name</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="username_label">Username</string>
+    <string name="username_hint">Enter your username</string>
+    <string name="email_label">Email</string>
+    <string name="email_hint">Enter your email address</string>
+    <string name="phone_label">Phone</string>
+    <string name="phone_hint">Enter your phone number</string>
+    <string name="save_button_label">Save</string>
+    <string name="save_button_text">Save</string>
+
+</resources>
